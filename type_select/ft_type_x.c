@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_type_c.c                                        :+:      :+:    :+:   */
+/*   ft_type_x.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 18:46:00 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/11 13:38:41 by lmaume           ###   ########.fr       */
+/*   Created: 2024/01/10 17:28:02 by lmaume            #+#    #+#             */
+/*   Updated: 2024/01/11 13:58:25 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-void	ft_type_c(int c, int *error)
+void	ft_type_x(unsigned int x, int *error)
 {
-	write(1, (char)c, 1);
+	write(1, ft_hexa_converter(x), ft_strlen(ft_hexa_converter(x)));
 }

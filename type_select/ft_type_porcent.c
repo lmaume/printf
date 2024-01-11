@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_type_c.c                                        :+:      :+:    :+:   */
+/*   ft_type_porcent.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 18:46:00 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/11 13:38:41 by lmaume           ###   ########.fr       */
+/*   Created: 2024/01/10 17:27:21 by lmaume            #+#    #+#             */
+/*   Updated: 2024/01/10 17:57:11 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-void	ft_type_c(int c, int *error)
+void	ft_type_porcent(char c, int *error)
 {
-	write(1, (char)c, 1);
+	write(1, '%', 1);
 }
