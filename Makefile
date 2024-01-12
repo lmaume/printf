@@ -6,13 +6,25 @@
 #    By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/18 16:10:53 by lmaume            #+#    #+#              #
-#    Updated: 2024/01/11 14:40:24 by lmaume           ###   ########.fr        #
+#    Updated: 2024/01/12 16:52:57 by lmaume           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRCS =	ft_printf.c
+SRCS =	ft_printf.c \
+		type_select/ft_type_c.c \
+		type_select/ft_type_d.c \
+		type_select/ft_type_i.c \
+		type_select/ft_type_p.c \
+		type_select/ft_type_d.c \
+		type_select/ft_type_porcent.c \
+		type_select/ft_type_s.c \
+		type_select/ft_type_u.c \
+		type_select/ft_type_x.c \
+		type_select/ft_type_xmaj.c \
+		utils/ft_hexa_converter.c \
+		utils/ft_str_toupper
 
 LIBFT = ./libft/libft.a
 
@@ -24,14 +36,12 @@ RM = rm -f
 
 OBJS = $(SRCS:.c=.o)
 
-
 all : $(NAME)
 
 $(NAME) : $(OBJS)
 	$(MAKE) all -C ./libft
 	cp $(LIBFT) $(NAME)
 	ar -rc $(NAME) $(OBJS)
-
 
 clean :
 	$(MAKE) clean -C ./libft
