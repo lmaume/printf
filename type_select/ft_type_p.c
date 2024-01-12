@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:27:12 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/10 18:05:46 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/12 16:16:34 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_type_p(void *p, int *error)
 {
-	write(1, p, 1);
+	if (write(1, p, 1))
+		*error = CRASH_WRITE;
 }

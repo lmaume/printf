@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:10:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/11 16:45:57 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/12 16:15:09 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-void	ft_type_c(int c, int error);
-void	ft_type_d(int d, int error);
-void	ft_type_i(int i, int error);
-void	ft_type_p(void *p, int error);
+void	ft_type_c(int c, int *error);
+void	ft_type_d(int d, int *error);
+void	ft_type_i(int i, int *error);
+void	ft_type_p(void *p, int *error);
 void	ft_type_porcent(int *error);
-void	ft_type_s(char *s, int error);
-void	ft_type_u(char u, int error);
-void	ft_type_x(unsigned int x, int error);
-void	ft_type_xmaj(unsigned int x, int error);
+void	ft_type_s(char *s, int *error);
+void	ft_type_u(char u, int *error);
+void	ft_type_x(unsigned int x, int *error);
+void	ft_type_xmaj(unsigned int x, int *error);
 char	*ft_hexa_converter(int base_number);
 char	*ft_str_toupper(char *str);
 int		ft_printf(const char *str, ...);
