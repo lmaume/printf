@@ -6,9 +6,12 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:33:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/11 13:56:25 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/15 15:17:41 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft/libft.h"
+#include "../libftprintf.h"
 
 static
 int	intlen(int number)
@@ -24,12 +27,13 @@ int	intlen(int number)
 	return (len);
 }
 
-char	*hexa_converter(int base_number)
+char	*ft_hexa_converter(int base_number)
 {
 	int		i;
 	char	*hextable;
 	char	*result;
 
+	result = 0;
 	hextable = "0123456789abcdef";
 	i = intlen(base_number);
 	while(i-- != 0)

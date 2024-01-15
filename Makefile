@@ -6,7 +6,7 @@
 #    By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/18 16:10:53 by lmaume            #+#    #+#              #
-#    Updated: 2024/01/12 16:52:57 by lmaume           ###   ########.fr        #
+#    Updated: 2024/01/15 15:10:00 by lmaume           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS =	ft_printf.c \
 		type_select/ft_type_x.c \
 		type_select/ft_type_xmaj.c \
 		utils/ft_hexa_converter.c \
-		utils/ft_str_toupper
+		utils/ft_str_toupper.c
 
 LIBFT = ./libft/libft.a
 
