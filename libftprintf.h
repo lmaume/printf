@@ -6,14 +6,14 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:10:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/17 19:09:27 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/17 19:51:24 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
 
-# include "../libft/libft.h"
+# include "libft/libft.h"
 # include <stdlib.h>
 # include <unistd.h>
 
