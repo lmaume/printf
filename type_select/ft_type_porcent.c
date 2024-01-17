@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:27:21 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/15 14:54:10 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/17 15:40:05 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_type_porcent(int *error)
 {
-	if (write(1, "%", 1))
+	if (write(1, "%", 1) < 0)
 		*error = CRASH_WRITE;
 }

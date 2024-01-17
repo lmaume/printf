@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:10:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/15 15:16:51 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/17 19:09:27 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ enum e_errors
 	ERROR_PRINTF = -1,
 	CRASH_NULL = -2,
 	CRASH_WRITE = -3,
-	CRASH_FLAG = -4
+	CRASH_FLAG = -4,
+	CRASH_MALLOC = -5
 };
 
 

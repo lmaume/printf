@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:33:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/15 15:17:41 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/15 15:21:26 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../libftprintf.h"
 
 static
-int	intlen(int number)
+int	ft_intlen(int number)
 {
 	int	len;
 
@@ -35,7 +35,7 @@ char	*ft_hexa_converter(int base_number)
 
 	result = 0;
 	hextable = "0123456789abcdef";
-	i = intlen(base_number);
+	i = ft_intlen(base_number);
 	while(i-- != 0)
 	{
 		result[i] = hextable[base_number / 16];

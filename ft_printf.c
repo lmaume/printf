@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 17:06:08 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/12 16:34:36 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/17 15:37:07 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,18 +47,25 @@ int	ft_printf(const char *str, ...)
 	va_start(params, str);
 	error = 0;
 	i = 0;
-	if (str[i] == '%')
+	while (str[i])
 	{
-		c = str[i + 1];
-		ft_define_type(c, params, &error);
-		if (!c)
+		if (str[i] == '%')
 		{
-			error = CRASH_NULL;
-			return (error);
+			c = str[i + 1];
+			ft_define_type(c, params, &error);
+			if (!c)
+			{
+				error = CRASH_NULL;
+				return (error);
+			}
+			i++;
 		}
+		else
+			write(1, &str[i], 1);
+		if (error < 0)
+			return (error);
+	i++;
 	}
-	if (error < 0)
-		return (error);
 	va_end(params);
 	return (error);
 }
