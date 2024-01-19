@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 17:06:08 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/19 16:27:01 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/19 16:32:51 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_define_type(char c, va_list params, int *error)
 }
 
 static
-int	tamere(const char *str, va_list params, int *error, int *j)
+int	ft_writecount(const char *str, va_list params, int *error, int *j)
 {
 	char	c;
 	int		i;
@@ -74,7 +74,7 @@ int	ft_printf(const char *str, ...)
 	error = 0;
 	i = 0;
 	j = 0;
-	j = tamere(str, params, &error, &j);
+	j = ft_writecount(str, params, &error, &j);
 	va_end(params);
 	if (error)
 		return (ERROR_PRINTF);
