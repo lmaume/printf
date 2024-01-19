@@ -6,14 +6,18 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:27:56 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/17 15:39:36 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/19 15:59:53 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-void	ft_type_u(char c, int *error)
+int	ft_type_u(char c, int *error)
 {
-	if (write(1, &c, 1) < 0)
+	int	w_len;
+
+	w_len = write(1, &c, 1);
+	if (w_len < 0)
 		*error = CRASH_WRITE;
+	return (w_len);
 }

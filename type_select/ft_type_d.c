@@ -6,23 +6,26 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:04:32 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/17 19:09:48 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/19 16:05:52 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-void	ft_type_d(int d, int *error)
+int	ft_type_d(int d, int *error)
 {
 	char	*str;
+	int		w_len;
 
 	str = ft_itoa(d);
 	if (!str)
 	{
 		*error = CRASH_MALLOC;
-		return ;
+		return (*error);
 	}
-	if (write(1, str, ft_strlen(str)) < 0)
+	w_len = write(1, str, ft_strlen(str));
+	if (w_len < 0)
 		*error = CRASH_WRITE;
 	free(str);
+	return (w_len);
 }

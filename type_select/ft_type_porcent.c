@@ -6,14 +6,15 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:27:21 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/17 15:40:05 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/19 15:55:11 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-void	ft_type_porcent(int *error)
+int	ft_type_porcent(int *error)
 {
 	if (write(1, "%", 1) < 0)
 		*error = CRASH_WRITE;
+	return (1);
 }

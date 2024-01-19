@@ -6,13 +6,13 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:26:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/17 19:52:37 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/19 15:57:17 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-void	ft_type_i(int i, int *error)
+int	ft_type_i(int i, int *error)
 {
-	ft_type_d(i, error);
+	return (ft_type_d(i, error));
 }
