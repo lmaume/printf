@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 17:06:08 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/19 16:32:51 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/24 16:06:26 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ int	ft_writecount(const char *str, va_list params, int *error, int *j)
 				i++;
 			}
 			else
-				*j += write(1, &str[i], 1);
+				if (*j += write(1, &str[i], 1) <= *j)
+					return (ERROR_PRINTF);
 			if (error < 0)
 				return (ERROR_PRINTF);
 		i++;

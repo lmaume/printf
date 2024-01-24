@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:10:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/19 15:52:49 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/24 16:47:28 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		ft_type_x(unsigned int x, int *error);
 int		ft_type_xmaj(unsigned int x, int *error);
 char	*ft_hexa_converter(unsigned int *base_number);
 char	*ft_str_toupper(char *str);
-int		ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...) __attribute__ (( format(printf, 1, 2) ));
 
 enum e_errors
 {
@@ -38,8 +38,5 @@ enum e_errors
 	CRASH_FLAG = -4,
 	CRASH_MALLOC = -5
 };
-
-
-int	ft_printf(const char *str, ...);
 
 #endif

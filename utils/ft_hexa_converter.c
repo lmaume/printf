@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:33:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/18 19:26:38 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/01/24 15:47:39 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ char	*ft_hexa_converter(unsigned int *base_number)
 		result[i] = hextable[*base_number % 16];
 		*base_number /= 16;
 	}
-	
 	return (result);
 }
