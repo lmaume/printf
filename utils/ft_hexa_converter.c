@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:33:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/24 15:47:39 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/06 18:11:21 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_hexa_converter(unsigned int *base_number)
 		return (NULL);
 	hextable = "0123456789abcdef";
 	i = ft_intlen(*base_number);
-	while(i-- != 0)
+	while (i-- != 0)
 	{
 		result[i] = hextable[*base_number % 16];
 		*base_number /= 16;

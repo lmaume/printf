@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:28:06 by lmaume            #+#    #+#             */
-/*   Updated: 2024/01/19 16:06:19 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/06 18:13:38 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_type_xmaj(unsigned int x, int *error)
 {
-	char*	ptr;
+	char	*ptr;
 	int		w_len;
-	
+
 	ptr = ft_str_toupper(ft_hexa_converter(&x));
 	if (!ptr)
 	{
