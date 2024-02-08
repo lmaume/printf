@@ -6,7 +6,7 @@
 #    By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/18 16:10:53 by lmaume            #+#    #+#              #
-#    Updated: 2024/02/06 18:34:08 by lmaume           ###   ########.fr        #
+#    Updated: 2024/02/08 19:06:11 by lmaume           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,3 +52,6 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
+
+debug : re
+	clear && cc -Wall -Wextra -g3 debug/*.c debug/utils/*/*.c libftprintf.a && ./a.out

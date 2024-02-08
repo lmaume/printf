@@ -6,12 +6,12 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:10:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/06 18:31:53 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/08 19:14:05 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef ft_printf_H
+# define ft_printf_H
 
 # include "libft/libft.h"
 # include <stdlib.h>
@@ -21,7 +21,7 @@ int		ft_type_c(int c, int *error);
 int		ft_type_d(int d, int *error);
 int		ft_type_i(int i, int *error);
 int		ft_type_p(void *p, int *error);
-int		ft_type_porcent(int *error);
+int		ft_type_porcent(char c, int *error);
 int		ft_type_s(char *s, int *error);
 int		ft_type_u(char u, int *error);
 int		ft_type_x(unsigned int x, int *error);
