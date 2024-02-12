@@ -1,31 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_type_u.c                                        :+:      :+:    :+:   */
+/*   ft_positive_itoa.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 17:27:56 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/09 18:51:09 by lmaume           ###   ########.fr       */
+/*   Created: 2024/02/09 18:41:37 by lmaume            #+#    #+#             */
+/*   Updated: 2024/02/09 18:52:53 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "../libftprintf.h"
 
-int	ft_type_u(unsigned int u, int *error)
+static
+int	getlen(long long int number)
+{	
+	int	len;
+
+	len = 0;
+	if (number == 0)
+		return (1);
+	while (number != 0)
+	{
+		len++;
+		number /= 10;
+	}
+	return (len);
+}
+
+char	*ft_positive_itoa(long long int n)
 {
 	char	*str;
-	int		w_len;
+	int		len;
 
-	str = ft_positive_itoa(u);
+	len = getlen(n);
+
+	str = ft_calloc((len + 0) + 1, 1);
 	if (!str)
+		return (NULL);
+	while (len >= 0)
 	{
-		*error = CRASH_MALLOC;
-		return (*error);
+		if (len - (1) >= 0)
+			str[len - 1] = (n % 10) + '0';
+		n /= 10;
+		len--;
 	}
-	w_len = write(1, str, ft_strlen(str));
-	if (w_len < 0)
-		*error = CRASH_WRITE;
-	free(str);
-	return (w_len);
+	return (str);
 }

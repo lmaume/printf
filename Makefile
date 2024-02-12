@@ -6,7 +6,7 @@
 #    By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/18 16:10:53 by lmaume            #+#    #+#              #
-#    Updated: 2024/02/08 19:06:11 by lmaume           ###   ########.fr        #
+#    Updated: 2024/02/09 18:51:59 by lmaume           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,13 +24,15 @@ SRCS =	ft_printf.c \
 		type_select/ft_type_x.c \
 		type_select/ft_type_xmaj.c \
 		utils/ft_hexa_converter.c \
+		utils/ft_ptr_to_hexa.c \
+		utils/ft_positive_itoa.c \
 		utils/ft_str_toupper.c
 
 LIBFT = ./libft/libft.a
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3
 
 RM = rm -f
 
@@ -39,17 +41,17 @@ OBJS = $(SRCS:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(MAKE) all -C ./libft
-	cp $(LIBFT) $(NAME)
-	ar -rc $(NAME) $(OBJS)
+	@$(MAKE) all -C ./libft
+	@cp $(LIBFT) $(NAME)
+	@ar -rc $(NAME) $(OBJS)
 
 clean :
-	$(MAKE) clean -C ./libft
-	$(RM) $(OBJS)
+	@$(MAKE) clean -C ./libft
+	@$(RM) $(OBJS)
 
 fclean : clean
-	$(MAKE) fclean -C ./libft
-	$(RM) $(NAME)
+	@$(MAKE) fclean -C ./libft
+	@$(RM) $(NAME)
 
 re : fclean all
 

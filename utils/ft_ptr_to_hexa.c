@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexa_converter.c                                :+:      :+:    :+:   */
+/*   ft_ptr_to_hexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:33:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/09 15:48:53 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/09 17:02:37 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../libftprintf.h"
 
 static
-int	ft_intlen(unsigned int number)
+int	ft_longlonglen(unsigned long long number)
 {
 	int	len;
 
@@ -27,21 +27,21 @@ int	ft_intlen(unsigned int number)
 	return (len);
 }
 
-char	*ft_hexa_converter(unsigned int *base_number)
+char	*ft_ptr_to_hexa(unsigned long long base_number)
 {
 	int		i;
 	char	*hextable;
 	char	*result;
 
-	result = ft_calloc(ft_intlen(*base_number) + 1, 1);
+	result = ft_calloc(ft_longlonglen(base_number) + 1, 1);
 	if (!result)
 		return (NULL);
 	hextable = "0123456789abcdef";
-	i = ft_intlen(*base_number);
+	i = ft_longlonglen(base_number);
 	while (i-- != 0)
 	{
-		result[i] = hextable[*base_number % 16];
-		*base_number /= 16;
+		result[i] = hextable[base_number % 16];
+		base_number /= 16;
 	}
 	return (result);
 }

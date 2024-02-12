@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:28:02 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/08 18:44:31 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/09 14:10:16 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ int	ft_type_x(unsigned int x, int *error)
 	char	*ptr;
 	int		w_len;
 
+	if (!x)
+	{
+		w_len = write(1, "0", 1);
+		return (1);
+	}
 	ptr = ft_hexa_converter(&x);
 	if (!ptr)
 	{

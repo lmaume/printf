@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:27:21 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/08 19:14:46 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/12 15:15:04 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,16 @@
 
 int	ft_type_porcent(char c, int *error)
 {
-	if (write(1, "%", 1) < 0)
-		*error = CRASH_WRITE;
+	int		i;
+
+	i = 1;
+	if (c != '%')
+	{
+		if (write(1, "%", 1) < 0)
+			*error = CRASH_WRITE;
+		i++;
+	}
 	if (write(1, &c, 1) < 0)
 		*error = CRASH_WRITE;
-	return (2);
+	return (i);
 }

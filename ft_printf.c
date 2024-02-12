@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 17:06:08 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/08 19:12:56 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/12 17:20:30 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,17 @@ int	ft_writecount(const char *str, va_list params, int *error, int *j)
 			c = str[i + 1];
 			if (!c)
 				return (ERROR_PRINTF);
-			*j += (ft_define_type(c, params, error));
 			i += 2;
+			written = (ft_define_type(c, params, error));
 		}
-		written = write(1, &str[i], 1);
-		if (*j + written <= *j)
+		else
+			written = write(1, &str[i++], 1);
+		if (*j + written < *j)
 			return (ERROR_PRINTF);
 		else
 			*j += written;
 		if (error < 0)
 			return (ERROR_PRINTF);
-		i++;
 	}
 	return (*j);
 }
@@ -70,13 +70,11 @@ int	ft_writecount(const char *str, va_list params, int *error, int *j)
 int	ft_printf(const char *str, ...)
 {
 	int		error;
-	//int		i;
 	int		j;
 	va_list	params;
 
 	va_start(params, str);
 	error = 0;
-	//i = 0;
 	j = 0;
 	j = ft_writecount(str, params, &error, &j);
 	va_end(params);
