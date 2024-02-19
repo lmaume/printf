@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:10:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/16 17:38:36 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/19 15:54:48 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ char	*ft_hexa_converter(unsigned int *base_number);
 char	*ft_ptr_to_hexa(unsigned long long base_number);
 char	*ft_positive_itoa(long long int n);
 char	*ft_str_toupper(char *str);
-int		ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...)
+		__attribute__ ((format (printf, 1, 2)));
 
 enum e_errors
 {
