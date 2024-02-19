@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 18:41:37 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/09 18:52:53 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/16 17:37:06 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ char	*ft_positive_itoa(long long int n)
 	int		len;
 
 	len = getlen(n);
-
 	str = ft_calloc((len + 0) + 1, 1);
 	if (!str)
 		return (NULL);

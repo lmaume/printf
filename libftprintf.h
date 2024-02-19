@@ -6,12 +6,12 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:10:48 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/12 17:43:09 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/16 17:38:36 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ft_printf_H
-# define ft_printf_H
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
 # include "libft/libft.h"
 # include <stdlib.h>

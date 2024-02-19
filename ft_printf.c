@@ -6,7 +6,7 @@
 /*   By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 17:06:08 by lmaume            #+#    #+#             */
-/*   Updated: 2024/02/12 17:20:30 by lmaume           ###   ########.fr       */
+/*   Updated: 2024/02/16 17:39:23 by lmaume           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_writecount(const char *str, va_list params, int *error, int *j)
 	char	c;
 	int		i;
 	int		written;
-	
+
 	i = 0;
 	while (str[i])
 	{
